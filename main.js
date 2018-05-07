@@ -77,4 +77,5 @@ $('.leave_gallery').click(function() {
     $('.imgs_container').find('.hidden_gallery').hide()
     $('.imgs_container').find('.main_img_selected').show()
     $('.imgs_container').siblings().removeClass('low_brightness')
+    $('.image_container').removeClass('low_brightness')
 })
