@@ -622,7 +622,7 @@ input:focus, textarea:focus {
 
     .top_bar .right_bar {
         width: 100%;
-        height: 8vw;
+        height: 10vw;
     }
 
         .left_bar img {
@@ -642,7 +642,7 @@ input:focus, textarea:focus {
         .right_bar a {
             margin: 0 auto;
             font-size: 3em;
-            line-height: 8vw;
+            line-height: 10vw;
         }
 
     .image_container {
@@ -686,11 +686,13 @@ input:focus, textarea:focus {
     .contact_window {
         width: 100%;
         height: 78%;
-        top: 21.9vw;
+        top: 23.7vw;
+        z-index: 2;
     }
 
         .contact_window p {
             font-size: 3em;
+            top:4vw;
         }
 
         .contact_window label {
@@ -711,8 +713,8 @@ input:focus, textarea:focus {
         }
 
         .social_icons a img {
-            width: 100%;
-            height: 100%;
+            width: 16vw;
+            height: 14vh;
             margin: 7% auto 0 auto;
         }
 
@@ -782,6 +784,12 @@ input:focus, textarea:focus {
         .see_more {
             font-size: 6vw;
             background: #000a;
+        }
+
+        .contact_window textarea {
+            height: 15vw;
+            min-height: 15vw;
+            max-height: 20vw;
         }
     
 }
