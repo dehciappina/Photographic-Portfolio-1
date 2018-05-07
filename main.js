@@ -14,13 +14,14 @@ $('.contact_button').click(function() {
             $('.contact_window').finish().toggle('blind', 300)
             console.log('hey')
             $('.click_out').hide()
+            
+            console.log('janela menor que 670')
         }
     })
 
 $('.click_out').click(function() {
     $('.contact_window').hide('blind', 300)
     $('.click_out').hide()
-    console.log('janela menor que 670')
 })
 
 $(".projects_button").click(function() {
@@ -64,8 +65,7 @@ $('.imgs_container').click(function() {
 })
 
 $('.imgs_container').click(function() {
-    $(this).find('.main_img_selected').finish().toggle(200)
-    $(this).find('.hidden_gallery').finish().slideToggle(600, 'easeOutCubic')
+    $(this).find('.hidden_gallery').finish().fadeToggle(600, 'easeOutCubic')
     $(this).siblings().finish().toggleClass('low_brightness')
     $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
     $('.image_container').finish().toggleClass('low_brightness')
