@@ -1,13 +1,36 @@
 <html>
-    <head>
-        <meta charset="utf-8"/>
-
-        <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
-
-        <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-    </head>
+        <head>
+                <!--
+                    THE META CHARSET MAKES YOUR PAGE TO ACCEPT SPECIAL CHARACTERS, LIKE ACCENTS.
+                -->
+                <meta charset="utf-8"/>
+        
+                <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
+        
+                <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+        
+                <!--
+                    YOUR FONT-FAMILY
+                    YOU CAN GET MORE AT FONTS.GOOGLE.COM
+                -->
+                <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+        
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+               
+                <!--
+                    FAVICON
+                -->
+                <link rel="icon" href="Assets/Icons/favicon.ico" />
+        
+                <!--
+                    RESPONSIVE FEATURES
+                -->
+                <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+                
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+        
+            </head>
 
     <body>
 
@@ -38,7 +61,7 @@
                 <article class="text_box">
                     <h1>Hi, my name is <span class="mila_redback">Mila</span></h1>
 
-                    <p>It's been 4 years since I live in Denmark (I was born in Calgary - Alberta, Canada). Since I’m 16 I felt in love and worked with photography - now I’m 28 I’ve got a lot to show about my professional experiences.</p>
+                    <p>It's been 4 years since I live in Denmark (I was born in Calgary - Alberta, Canada). Since I’m 16 I felt in love and work with photography - now I’m 28 I’ve got a lot to show about my professional experiences.</p>
 
                     <p>Since the beginning of my career, I put in my photography all the love I have for life. Framing each pixel together to cause the most intense feelings is always the main objective of my work.</p>
 
@@ -47,28 +70,35 @@
                 </article>
             </section>
 
-        <section class="contact_window">
-            <p>milajenkins@email.com</p>
+            <section class="contact_window">
+                    <p>milajenkins@email.com</p>
+    
+                    <form>
+                        <label>Name</label>
+                        <input type="text" class="name_form" name="name" placeholder="">
+    
+                        <label>E-mail</label>
+                        <input type="text" class="email_form" name="email" placeholder="">
+    
+                        <label>Message</label>
+                        <textarea type="text" class="textarea_form" name="name" placeholder=""></textarea>
+    
+                        <input class="botaoenviar" type="submit" value="Submit">
+                    </form>
+    
+                    <!-- 
+                        YOUR SOCIAL NETWORKS
+                        YOU PUT THE URL (WITH 'HTPPS://' OR 'HTTP://') INSIDE 'HREF' IN THE <A> TAG.
+                        iF YOU WANT, YOU CAN PUT 'TARGET="_BLANK"' NEXT TO HREF, SO THE LINK WILL OPEN A NEW TAB WHEN YOU CLICK IT.
+                     -->
+                    <article class="social_icons">
+                        <a href="#"><img src="Assets/Icons/facebook.svg"/></a>
+                        <a href="#"><img src="Assets/Icons/linkedin.svg"/></a>
+                        <a href="#"><img src="Assets/Icons/flickr.svg"/></a>
+                    </article>
+                </section>
 
-            <form>
-                <label>Name</label>
-                <input type="text" class="name_form" name="name" placeholder="">
-
-                <label>E-mail</label>
-                <input type="text" class="email_form" name="email" placeholder="">
-
-                <label>Message</label>
-                <textarea type="text" class="textarea_form" name="name" placeholder=""></textarea>
-
-                <input class="botaoenviar" type="submit" value="Submit">
-            </form>
-
-            <article class="social_icons">
-                <img src="Assets/Icons/facebook.svg"/>
-                <img src="Assets/Icons/linkedin.svg"/>
-                <img src="Assets/Icons/flickr.svg"/>
-            </article>
-        </section>
+                
         </main>
         <footer class="footer">
             <p>milajenkins@email.com</p>
