@@ -559,7 +559,7 @@ input:focus, textarea:focus {
     left: 0;
     right: 0;
     bottom: 9%;
-    background: #0005;
+    background: #D7282F55;
     border: none;
     font-weight: 300;
     font-size: 1em;
@@ -568,7 +568,7 @@ input:focus, textarea:focus {
 }
 
 .see_more:hover {
-    background:#000a;
+    background:#D7282Faa;
     height: 12vh;
     line-height: 12vh;
 }
@@ -719,12 +719,13 @@ input:focus, textarea:focus {
         }
 
         .hidden_gallery {
-            position: relative;
-            height:auto;s
+            position: fixed;
+            top: 24vw;
+            height: auto;
         }
 
         .leave_gallery {
-            top: 22vw;
+            top: 24vw;
             bottom:unset;
         }
 
@@ -766,9 +767,9 @@ input:focus, textarea:focus {
         }
 
         .leave_gallery p {
-            font-size: 1.4em;
-            padding: 15px 7px;
-            width: 50%;
+            font-size: 4vw;
+            padding: 10px 7px;
+            width: 100%;
             background: #000a;
         }
 
@@ -783,7 +784,7 @@ input:focus, textarea:focus {
 
         .see_more {
             font-size: 6vw;
-            background: #000a;
+            background: #D7282F55;
         }
 
         .contact_window textarea {
