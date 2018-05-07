@@ -1,0 +1,263 @@
+<!doctype html>
+
+<html>
+    <head>
+        <!--
+            THE META CHARSET MAKES YOUR PAGE TO ACCEPT SPECIAL CHARACTERS, LIKE ACCENTS.
+        -->
+        <meta charset="utf-8"/>
+
+        <link rel="stylesheet" type="text/css" href="main.css" media="all"/>
+
+        <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+        <!--
+            YOUR FONT-FAMILY
+            YOU CAN GET MORE AT FONTS.GOOGLE.COM
+        -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <!--
+            FAVICON
+        -->
+        <link rel="icon" href="Assets/Icons/favicon.ico" />
+
+        <!--
+            RESPONSIVE FEATURES
+        -->
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    </head>
+
+    <body>
+
+        <button class="leave_gallery">
+            <p>click anywhere to return</p>
+        </button>
+
+        <!--
+            'LEAVE_GALLERY' APPEARS WHEN YOU ENTER INTO CONTACT WINDOW. IT MAKES THE CONTACT WINDOW CLOSE WHEN YOU CLICK OUTSIDE OF IT.
+        -->
+
+        <div class="click_out">
+
+        </div>
+
+
+        <!--
+            A HEADER TAG FOR THE HEADER OF YOUR SITE.
+            IT WAS MADE IN TWO PARTS - TWO SECTIONS:
+            THE 'LEFT-BAR' CARRIES YOUR LOGO AND PORTFOLIO TITLE;
+            THE 'RIGHT-BAR' CARRIES THE NAVIGATION BUTTONS.
+        -->
+        <header class="top_bar">
+            <section class="left_bar">
+                <img src="Assets/Icons/logo-01.svg"/>
+                <p>Mila Jenkins</p>
+            </section>
+
+            <section class="right_bar">
+                <a><p class="projects_button">Home</p></a>
+                <a href="aboutme.html"><p>About me</p></a>
+                <a><p class="contact_button">Contact</p></a>
+            </section>
+        </header>
+
+
+        <!--
+            CONTENT BETWEEN HEADER AND FOOTER
+        -->
+        <main class="mid_content">
+
+            <!--
+                THE IMAGE THAT MOVES IN BACKGROUND
+            -->
+            <div class="image_container"></div>
+
+
+            <!--
+                THE INITIAL QUOTE
+            -->
+            <section class="main_quote">
+                <h2>“There are always two people in every picture: the photographer and the viewer.”</h2>
+                <p>Ansel Adams<br/>1902 - 1984</p>
+            </section>
+            
+
+            <!--
+                THE LITTLE WINDOW WITH A E-MAIL FORM AND YOUR SOCIAL NETWORKS LINK
+            -->
+            <section class="contact_window">
+                <p>milajenkins@email.com</p>
+
+                <form>
+                    <label>Name</label>
+                    <input type="text" class="name_form" name="name" placeholder="">
+
+                    <label>E-mail</label>
+                    <input type="text" class="email_form" name="email" placeholder="">
+
+                    <label>Message</label>
+                    <textarea type="text" class="textarea_form" name="name" placeholder=""></textarea>
+
+                    <input class="botaoenviar" type="submit" value="Submit">
+                </form>
+
+                <!-- 
+                    YOUR SOCIAL NETWORKS
+                    YOU PUT THE URL (WITH 'HTPPS://' OR 'HTTP://') INSIDE 'HREF' IN THE <A> TAG.
+                    iF YOU WANT, YOU CAN PUT 'TARGET="_BLANK"' NEXT TO HREF, SO THE LINK WILL OPEN A NEW TAB WHEN YOU CLICK IT.
+                 -->
+                <article class="social_icons">
+                    <a href="#"><img src="Assets/Icons/facebook.svg"/></a>
+                    <a href="#"><img src="Assets/Icons/linkedin.svg"/></a>
+                    <a href="#"><img src="Assets/Icons/flickr.svg"/></a>
+                </article>
+            </section>
+    
+
+            <!-- 
+                MAIN GALLERY, BELOW THE QUOTE
+                CLICKING ONE OF THOSE "IMG_CONTAINER" WILL SHOW UP MORE PHOTOS RELATES TO IT'S SUBJECT
+            -->
+            <section class="projects">
+                <div class="imgs_container">
+
+                    <!-- "HIDDEN_GALLERY" IS THE ONE WHO SHOWS UP WHEN YOU CLICK IT'S CONTAINER -->
+                        <section class="hidden_gallery">
+                                <img src="Assets/Images/landscape1.jpeg"/>
+                                <img src="Assets/Images/landscape2.jpeg"/>
+
+                                <a href="#" class="see_more">See more photos like this</a>
+                        </section>
+
+
+                    <img class="main_img_selected" src="Assets/Images/photo1.jpeg"/>
+                    
+                    
+                    <!--
+                        THE TITLE OF THIS CONTAINER
+                    -->
+                    <p class="bottom_box">Landscape</p>
+                </div>
+
+                <div class="imgs_container concerts">
+                    
+                        <section class="hidden_gallery">
+                                <img src="Assets/Images/photo10.jpeg"/>
+                                <img src="Assets/Images/photo11.jpeg"/>
+                                <img src="Assets/Images/photo12.jpeg"/>
+
+                                <a href="#" class="see_more">See more like this</a>
+                        </section>
+
+                    <img class="main_img_selected" src="Assets/Images/photo2.jpeg"/>
+                    
+                    <p class="bottom_box">Concerts</p>
+                </div>
+
+
+                <div class="imgs_container">
+
+                        <section class="hidden_gallery">
+                                <img src="Assets/Images/wedding1.jpeg"/>
+                                <img src="Assets/Images/wedding2.jpeg"/>
+                                <img src="Assets/Images/wedding3.jpg"/>
+
+                                <a href="#" class="see_more">See more like this</a>
+                        </section>
+
+                    <img class="main_img_selected" src="Assets/Images/photo3.jpeg"/>
+                    
+                    <p class="bottom_box">Social Events</p>
+                </div>
+
+
+            
+                <div class="imgs_container">
+
+                        <section class="hidden_gallery">
+                                <img src="Assets/Images/wild1.jpeg"/>
+                                <img src="Assets/Images/wild2.jpeg"/>
+                                <img src="Assets/Images/wild3.jpeg"/>
+
+                                <a href="#" class="see_more">See more like this</a>
+                        </section>
+
+                    <img class="main_img_selected" src="Assets/Images/photo4.jpeg"/>
+                    
+                    <p class="bottom_box">Wild Life</p>
+                </div>
+
+
+
+
+                <div class="imgs_container">
+                    <img class="main_img_selected" src="Assets/Images/photo5.jpeg"/>
+                    
+                    <p class="bottom_box">Portrait</p>
+                </div>
+
+
+
+
+                <div class="imgs_container">
+                    <img class="main_img_selected" src="Assets/Images/photo6.jpeg"/>
+                    
+                    <p class="bottom_box">Product</p>
+                </div>
+
+
+
+
+                <div class="imgs_container">
+                    <img class="main_img_selected" src="Assets/Images/photo7.jpeg"/>
+                    
+                    <p class="bottom_box">Archtecture</p>
+                </div>
+
+
+
+
+                <div class="imgs_container">
+                    <img class="main_img_selected" src="Assets/Images/photo8.jpeg"/>
+                    
+                    <p class="bottom_box">Food</p>
+                </div>
+
+
+
+
+                <div class="imgs_container">
+                    <img class="main_img_selected" src="Assets/Images/photo9.jpeg"/>
+                    
+                    <p class="bottom_box">Macro</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>milajenkins@email.com</p>
+            <p>92 3904 1939</p>
+            <p>28 years old</p>
+            <p>en-CA</p>
+        </footer>
+
+
+        <!--
+            SOME SCRIPTS BELOW, I DON'T THINK YOU SHOULD DELETE ANY OF'EM.  
+        -->
+        <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    
+        <script type="text/javascript" src="main.js"></script>
+
+        <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+        
+        <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    </body>
+</html>
