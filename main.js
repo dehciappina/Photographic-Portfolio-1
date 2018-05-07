@@ -34,10 +34,20 @@ $(".projects_button").click(function() {
     }
 
     else {
-        $('.main_quote').slideDown()
-        $('.projects').animate({
-            top:'46vh'
-        }, 300)
+
+        if($(window).width() > 670) {
+            $('.main_quote').slideDown(300)
+            $('.projects').animate({
+                top:'46vh'
+            }, 300)
+        }
+
+        else {
+            $('.main_quote').slideDown(300)
+            $('.projects').animate({
+                top:'42.5vw'
+            }, 300)
+        }
     }
 })
 
@@ -58,6 +68,7 @@ $('.imgs_container').click(function() {
     $(this).find('.hidden_gallery').slideToggle(600, 'easeOutCubic')
     $(this).siblings().toggleClass('low_brightness')
     $(this).siblings().find('.hidden_gallery').slideUp(800, 'easeOutCubic')
+    $('.image_container').toggleClass('low_brightness')
 })
 
 

@@ -204,30 +204,28 @@ a:hover, a:visited, a:link, a:active
     height: 36vh;
     width: 33.333333333%;
     float: left;
+    transition: 0.3s;
 }
 
         .projects .imgs_container:hover {
             cursor:pointer;
-            -webkit-transition:0.3s ease;
-            -o-transition:0.3s ease;
-            transition:0.3s ease;
+            -webkit-transition:0.2s ease;
+            -o-transition:0.2s ease;
+            transition:0.2s ease;
         }
 
         .projects .imgs_container:hover img {
-            -webkit-filter:saturate(1.5);
-                    filter:saturate(1.5);
-            position:relative;
+            position: relative;
+            filter: grayscale(40%) brightness(1.1);
+            transition:0.4s;
         }
 
         .projects .imgs_container:hover .bottom_box {
-            background:-webkit-gradient(linear, left top, right top, from(transparent), color-stop(25%, #0005), color-stop(#000a), color-stop(75%, #0005), to(transparent));
-            background:-webkit-linear-gradient(left, transparent, #0005 25%, #000a, #0005 75%, transparent);
-            background:-o-linear-gradient(left, transparent, #0005 25%, #000a, #0005 75%, transparent);
-            background:linear-gradient(90deg, transparent, #0005 25%, #000a, #0005 75%, transparent);
-            width: 100%;
-            -webkit-transition:1s ease;
-            -o-transition:1s ease;
-            transition:1s ease;
+            background:#000a;
+            -webkit-transition:0.4s ease;
+            -o-transition:0.5s ease;
+            transition:0.5s ease;
+            line-height: 10vh;
         }
 
         .projects .imgs_container:nth-last-child(1) {
@@ -243,9 +241,8 @@ a:hover, a:visited, a:link, a:active
        object-fit: cover;
     -o-object-position: 100% 10%;
        object-position: 100% 10%;
-    -webkit-transition:0.3s ease;
-    -o-transition:0.3s ease;
-    transition:0.3s ease;
+       
+       transition:1s;
 }
 
 .bottom_box {
@@ -256,12 +253,9 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     width: 38.2%;
     margin: 0 auto;
-    background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(25%, #0005), color-stop(#000a), color-stop(75%, #0005), to(transparent));
-    background: -webkit-linear-gradient(left, transparent, #0005 25%, #000a, #0005 75%, transparent);
-    background: -o-linear-gradient(left, transparent, #0005 25%, #000a, #0005 75%, transparent);
-    background: linear-gradient(90deg, transparent, #0005 25%, #000a, #0005 75%, transparent);
+    background:#0005;
     color: white;
-    line-height: 11vh;
+    line-height: 6vh;
     font-size: 20px;
     display: block;
     font-weight: 300;
@@ -628,10 +622,11 @@ input:focus, textarea:focus {
 
     .top_bar .right_bar {
         width: 100%;
+        height: 8vw;
     }
 
         .left_bar img {
-            top:20%;
+            top:15%;
             bottom: 20%;
             right: 0;
             left: 5%;
@@ -641,11 +636,13 @@ input:focus, textarea:focus {
         .left_bar p {
             right: 10%;
             font-size: 3.5em;
+            line-height: 14vw;
         }
 
         .right_bar a {
             margin: 0 auto;
             font-size: 3em;
+            line-height: 8vw;
         }
 
     .image_container {
@@ -653,12 +650,15 @@ input:focus, textarea:focus {
         background-position: 0% 20%;
         animation:none;
         opacity:0.6;
+        height: 43vw;
+        bottom: unset;
     }
 
     .main_quote {
         right: 56%;
-        top: 12vh;
+        bottom: unset;
         animation:none;
+        top: 4%;
     }
 
         .main_quote h2 {
@@ -667,9 +667,9 @@ input:focus, textarea:focus {
         }
 
         .main_quote p {
-            bottom: 10%;
+            bottom: unset;
             right:unset;
-            top: 22vh;
+            top: 105%;
             font-size: 1.8em;
             text-align: left;
         }
@@ -685,8 +685,8 @@ input:focus, textarea:focus {
 
     .contact_window {
         width: 100%;
-        height: 73%;
-        top: 18vh;
+        height: 78%;
+        top: 21.9vw;
     }
 
         .contact_window p {
@@ -707,12 +707,12 @@ input:focus, textarea:focus {
         }
 
         .social_icons {
-            top: 90%;
+            top: 81%;
         }
 
-        .social_icons img {
-            width: 30%;
-            height: 90%;
+        .social_icons a img {
+            width: 100%;
+            height: 100%;
             margin: 7% auto 0 auto;
         }
 
@@ -722,12 +722,13 @@ input:focus, textarea:focus {
         }
 
         .leave_gallery {
-            top: unset;
-            bottom: 13%;
+            top: 22vw;
+            bottom:unset;
         }
 
         .left_bar {
-            box-shadow: inset 0 -4px 0 white;
+            box-shadow: inset 0 -3px 0 white;
+            height: 14vw;
         }
 
         .profile_about .profile_picture {
@@ -760,6 +761,27 @@ input:focus, textarea:focus {
 
         .profile_about .profile_picture {
             opacity:0.6;
+        }
+
+        .leave_gallery p {
+            font-size: 1.4em;
+            padding: 15px 7px;
+            width: 50%;
+            background: #000a;
+        }
+
+        .mid_content {
+            top: 22vw;
+            bottom: 9vh;
+        }
+
+        .projects {
+            top: 42.5vw;
+        }
+
+        .see_more {
+            font-size: 6vw;
+            background: #000a;
         }
     
 }
