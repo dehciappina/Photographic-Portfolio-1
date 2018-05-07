@@ -28,7 +28,7 @@ $(".projects_button").click(function() {
     if($('.main_quote').is(':visible')) {
 
         $('.main_quote').slideUp()
-        $('.projects').animate({
+        $('.projects').finish().animate({
             top:'0'
         }, 300)
     }
@@ -37,14 +37,14 @@ $(".projects_button").click(function() {
 
         if($(window).width() > 670) {
             $('.main_quote').slideDown(300)
-            $('.projects').animate({
+            $('.projects').finish().animate({
                 top:'46vh'
             }, 300)
         }
 
         else {
             $('.main_quote').slideDown(300)
-            $('.projects').animate({
+            $('.projects').finish().animate({
                 top:'42.5vw'
             }, 300)
         }
@@ -64,18 +64,18 @@ $('.imgs_container').click(function() {
 })
 
 $('.imgs_container').click(function() {
-    $(this).find('.main_img_selected').toggle(200)
-    $(this).find('.hidden_gallery').slideToggle(600, 'easeOutCubic')
-    $(this).siblings().toggleClass('low_brightness')
-    $(this).siblings().find('.hidden_gallery').slideUp(800, 'easeOutCubic')
-    $('.image_container').toggleClass('low_brightness')
+    $(this).find('.main_img_selected').finish().toggle(200)
+    $(this).find('.hidden_gallery').finish().slideToggle(600, 'easeOutCubic')
+    $(this).siblings().finish().toggleClass('low_brightness')
+    $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
+    $('.image_container').finish().toggleClass('low_brightness')
 })
 
 
 $('.leave_gallery').click(function() {
     $(this).hide()
-    $('.imgs_container').find('.hidden_gallery').hide()
-    $('.imgs_container').find('.main_img_selected').show()
-    $('.imgs_container').siblings().removeClass('low_brightness')
-    $('.image_container').removeClass('low_brightness')
+    $('.imgs_container').find('.hidden_gallery').finish().hide()
+    $('.imgs_container').find('.main_img_selected').finish().show()
+    $('.imgs_container').siblings().finish().removeClass('low_brightness')
+    $('.image_container').finish().removeClass('low_brightness')
 })
