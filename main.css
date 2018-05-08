@@ -75,11 +75,21 @@ a:hover, a:visited, a:link, a:active
 .left_bar p {
     position: absolute;
     right: 15%;
-    line-height: 9vh;
+    line-height: 7vh;
     color: white;
     font-size: 1em;
     cursor: default;
     cursor: pointer;
+}
+
+.left_bar::after {
+    content:"PHOTOGRAPHIC PORTFOLIO";
+    color: white;
+    font-size: 0.389em;
+    position: absolute;
+    font-weight: 200;
+    right: 15%;
+    bottom: 12%;
 }
 
 .right_bar {
@@ -540,8 +550,8 @@ input:focus, textarea:focus {
     background: none;
     border: 0;
     font-size: 1.6em;
-    color: #DDD;
-    background: #0004;
+    color: #000;
+    text-shadow: 0px 0px 8px #fff;
     padding: 2px 5px;
     width: 30%;
     margin: 0 auto;
@@ -642,7 +652,7 @@ input:focus, textarea:focus {
         .left_bar p {
             right: 10%;
             font-size: 3.5em;
-            line-height: 14vw;
+            line-height: 11vw;
         }
 
         .right_bar a {
@@ -798,5 +808,14 @@ input:focus, textarea:focus {
             min-height: 15vw;
             max-height: 20vw;
         }
+
+        
+.left_bar::after {
+    color: white;
+    font-size: 1.35em;
+    right: 10%;
+    font-weight: 200;
+}
+
     
 }

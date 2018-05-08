@@ -65,7 +65,7 @@ $('.imgs_container').click(function() {
 })
 
 $('.imgs_container').click(function() {
-    $(this).find('.hidden_gallery').finish().fadeToggle(600, 'easeOutCubic')
+    $(this).find('.hidden_gallery').finish().fadeToggle(400, 'easeOutCubic')
     $(this).siblings().finish().toggleClass('low_brightness')
     $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
     $('.image_container').finish().toggleClass('low_brightness')
