@@ -120,3 +120,9 @@ $('.leave_gallery').click(function() {
 })
 
 toggleBars = 250
+
+
+function preloader() {
+heavyImage = new Image();
+heavyImage.src = "Assets/Images/woman.jpeg";
+}
