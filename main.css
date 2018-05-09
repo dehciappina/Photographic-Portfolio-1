@@ -215,7 +215,7 @@ a:hover, a:visited, a:link, a:active
 .projects .imgs_container {
     position: relative;
     height: 36vh;
-    width: 33.333333333%;
+    width: calc(100vw/3);
     float: left;
     transition: 0.3s;
 }
@@ -229,16 +229,17 @@ a:hover, a:visited, a:link, a:active
 
         .projects .imgs_container:hover img {
             position: relative;
-            filter: grayscale(40%) brightness(1.1);
-            transition:0.4s;
+            transition:0.2s ease;
+            outline:solid 0.5em #fff1;
+            outline-offset: -0.5em;
         }
 
         .projects .imgs_container:hover .bottom_box {
             background:#000a;
-            -webkit-transition:0.4s ease;
-            -o-transition:0.5s ease;
-            transition:0.5s ease;
-            line-height: 10vh;
+            -webkit-transition:0.2s ease;
+            -o-transition:0.2s ease;
+            transition:0.2s ease;
+            line-height: 8vh;
         }
 
         .projects .imgs_container:nth-last-child(1) {
@@ -255,7 +256,8 @@ a:hover, a:visited, a:link, a:active
     -o-object-position: 100% 10%;
        object-position: 100% 10%;
        
-       transition:1s;
+       transition:0.5s ease;
+       outline:solid 0px #fff0;
 }
 
 
@@ -275,9 +277,9 @@ a:hover, a:visited, a:link, a:active
     font-size: 20px;
     display: block;
     font-weight: 300;
-    -webkit-transition:1s ease;
-    -o-transition:1s ease;
-    transition:1s ease;
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
+    transition:0.5s ease;
 }
 
 .main_quote {
@@ -288,6 +290,10 @@ a:hover, a:visited, a:link, a:active
     right: 50%;
     bottom: 52.2%;
     cursor: default;
+}
+
+.main_quote div {
+    display:none;
 }
 
 .main_quote h2, .main_quote p {
@@ -424,11 +430,11 @@ input:focus, textarea:focus {
 .hidden_gallery {
     width: 100%;
     z-index: 2;
-    height: 65vw;
+    height: auto;
     display: none;
     position: fixed;
     overflow: auto;
-    top: 9%;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -440,9 +446,6 @@ input:focus, textarea:focus {
     width: 100%;
 }
 
-.hidden_gallery img:last-of-type {
-    margin-bottom: 27%;
-}
 
 /* === ABOUT ME === */
 
@@ -536,26 +539,26 @@ input:focus, textarea:focus {
 .leave_gallery {
     position: fixed;
     top: 9%;
-    left: 0;
-    right: 0;
-    width: 100%;
+    left: 5%;
+    width:3em;
+    margin: 0 auto;
     z-index: 100;
     border: none;
     cursor: pointer;
     display: none;
     background: none;
+    transition:1s ease;
 }
 
-.leave_gallery p {
-    background: none;
-    border: 0;
-    font-size: 1.6em;
-    color: #000;
-    text-shadow: 0px 0px 8px #fff;
-    padding: 2px 5px;
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
+.leave_gallery:hover svg * {
+    fill:#fff;
+
+}
+
+.leave_gallery:hover svg {
+    transform:rotateZ(90deg);
+    transition: 0.3s cubic-bezier(0.6, -0.01, 0.62, 1.01);
+
 }
 
 .leave_gallery:focus {
@@ -572,28 +575,25 @@ input:focus, textarea:focus {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 9%;
-    background: #D7282F55;
+    bottom: 0;
+    background: #D7282Faa;
     border: none;
     font-weight: 300;
     font-size: 1em;
     text-align: center;
     transition:0.3s ease;
+    display:none;
 }
 
 .see_more:hover {
-    background:#D7282Faa;
+    background:#D7282F;
     height: 12vh;
     line-height: 12vh;
 }
 
-
-
-
-
-
-
-
+.expand_gallery {
+    top:0%;
+}
 
 
 
@@ -616,7 +616,7 @@ input:focus, textarea:focus {
 
 /* === FOR SCREENS WITH LESS THAN 1200px, .IMAGE_CONTAINER WILL NOT BE ANIMATED === */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
     .image_container {
         -webkit-animation: none;
@@ -630,7 +630,7 @@ input:focus, textarea:focus {
 
 /* === CONFIGURATION FOR SCREENS WITH LESS THAN 1000px === */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 670px) {
 
     .top_bar .left_bar {
         width: 100%;
@@ -662,31 +662,34 @@ input:focus, textarea:focus {
         }
 
     .image_container {
-        background-size: 120%;
-        background-position: 0% 20%;
+        background-size: 135%;
+        background-position: 25% 0%;
         animation:none;
         opacity:0.6;
-        height: 43vw;
+        height: 100%;
         bottom: unset;
     }
 
     .main_quote {
-        right: 56%;
+        right: 50%;
         bottom: unset;
-        animation:none;
-        top: 4%;
+        animation: none;
+        top: 10%;
     }
 
         .main_quote h2 {
-            font-size: 2em;
-            font-weight: 400;
+            font-size: 3em;
+            letter-spacing: -0.5px;
+            font-weight: 300;
         }
 
         .main_quote p {
             bottom: unset;
             right:unset;
             top: 105%;
-            font-size: 1.8em;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 0;
             text-align: left;
         }
 
@@ -736,12 +739,12 @@ input:focus, textarea:focus {
 
         .hidden_gallery {
             position: fixed;
-            top: 24vw;
             height: auto;
         }
 
         .leave_gallery {
-            top: 24vw;
+            top: 6%;
+            left:10%;
             bottom:unset;
         }
 
@@ -795,7 +798,7 @@ input:focus, textarea:focus {
         }
 
         .projects {
-            top: 42.5vw;
+            top: 48vh;
         }
 
         .see_more {
