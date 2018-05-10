@@ -31,6 +31,7 @@ $(document).ready(function() {
     setInterval(function() {
       showNextQuote() 
     }, 5000)
+
 })
 
 
@@ -104,19 +105,23 @@ $('.imgs_container').click(function() {
     $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
     $('.image_container').finish().toggleClass('low_brightness')
 
-    $('.footer').toggle('blind', { direction: "down" }, toggleBars);
-    $('.top_bar').toggle('blind', toggleBars);
+    $('.footer').finish().toggle('blind', { direction: "down" }, toggleBars);
+    $('.top_bar').finish().toggle('blind', toggleBars);
+    
+    $(this).find('.hidden_gallery').find('img').toggleClass('change_project_height')
 })
 
 $('.leave_gallery').click(function() {
     $(this).hide()
-    $('.imgs_container').find('.hidden_gallery').finish().hide()
+    $('.imgs_container').find('.hidden_gallery').finish().fadeOut(300, 'easeOutCubic')
     $('.imgs_container').find('.main_img_selected').finish().show()
     $('.imgs_container').siblings().finish().removeClass('low_brightness')
     $('.image_container').finish().removeClass('low_brightness')
-    $('.top_bar').toggle('blind', toggleBars);
-    $('.footer').toggle('blind', { direction: "down" }, toggleBars);
-    $('.see_more').slideToggle(300)
+    $('.top_bar').finish().toggle('blind', toggleBars);
+    $('.footer').finish().toggle('blind', { direction: "down" }, toggleBars);
+    $('.see_more').finish().slideToggle(300)
+    
+    $(this).find('.hidden_gallery').find('img').toggleClass('change_project_height')
 })
 
 toggleBars = 250
@@ -126,3 +131,5 @@ function preloader() {
 heavyImage = new Image();
 heavyImage.src = "Assets/Images/woman.jpeg";
 }
+
+/* ======= */
