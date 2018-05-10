@@ -1,0 +1,782 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    width:100%;
+    height:100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    background:#111;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color:inherit;
+}
+
+.click_out {
+    position: fixed;
+    top: 9vh;
+    right: 23.6%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+/* === HEADER === */
+
+.top_bar {
+    position:fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.left_bar, .right_bar {
+    position:relative;
+    top:0;
+    height:9vh;
+    float:left;
+}
+
+.top_bar .left_bar {
+    width: 38.2%;
+    left: 0;
+    background: #F32735;
+}
+
+.top_bar .right_bar {
+    width: 61.8%;
+    right:0;
+    background:#D7282F;
+}
+
+/* === MAIN LOGO === */
+
+.left_bar img {
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    right: 0;
+    left: 15%;
+    width: 30%;
+    cursor: pointer;
+}
+
+.left_bar p {
+    position: absolute;
+    right: 15%;
+    line-height: 7vh;
+    color: white;
+    font-size: 1em;
+    cursor: default;
+    cursor: pointer;
+}
+
+.left_bar::after {
+    content:"PHOTOGRAPHIC PORTFOLIO";
+    color: white;
+    font-size: 0.389em;
+    position: absolute;
+    font-weight: 300;
+    right: 15%;
+    bottom: 12%;
+}
+
+.right_bar {
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+}
+
+.right_bar a {
+    margin: 0 auto 0 6vw;
+    line-height: 9vh;
+    color: white;
+    font-weight: 300;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+    .right_bar a:hover {
+        background:#fff1;
+    }
+
+
+
+/* === FOOTER === */
+
+.footer {
+    position:fixed;
+    right:0;
+    left:0;
+    top:91%;
+    bottom:0;
+    background:#111;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0 8vw;
+    z-index: 2;
+}
+
+.footer p {
+    color: #ddd;
+    font-size: 18px;
+    font-weight: 200;
+    line-height:9vh;
+    margin: 0 auto;
+}
+
+
+/* === MAIN CONTENT === */
+
+.mid_content {
+    position: absolute;
+    top: 9vh;
+    bottom: 9vh;
+    right: 0;
+    left: 0;
+    background: #fff;
+}
+
+.image_container {
+    position: absolute;
+    background-image: url(Assets/Images/woman.jpeg);
+    background-size: 70%;
+    background-position: 100% 180%;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 0;
+    -webkit-animation:background_move 8s ease-in-out alternate infinite;
+            animation:background_move 8s ease-in-out alternate infinite;
+}
+
+
+/* === CONTACT WINDOW === */
+
+.contact_window {
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    width: 23.6%;
+    height: 100%;
+    height: 91%;
+    background: linear-gradient(180deg, #F32735, #820000);
+    display:none;
+}
+
+.contact_window p {
+    color: white;
+    position: absolute;
+    top: 4%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+
+.contact_window form {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+}
+
+.contact_window label {
+    display: block;
+    color: white;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.contact_window input {
+    border: none;
+    height: 2vw;
+    margin-bottom: 13px;
+    width: 95%;
+    padding-left: 5%;
+    font-size:16px;
+    border-radius: 2px;
+}
+
+input:focus, textarea:focus {
+    outline:none;
+}
+
+.contact_window textarea {
+    min-width: 95%;
+    max-width: 95%;
+    padding-left: 5%;
+    padding-top: 5%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 400px;
+    margin-top: 7px;
+    overflow: auto;
+    font-size:16px;
+    float: left;
+    border-radius: 2px;
+    border: none;
+}
+
+.contact_window form .botaoenviar {
+    background: #0005;
+    color: white;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact_window form .botaoenviar:hover {
+    background:#0003;
+}
+
+/* === SOCIAL NETWORK ICONS IN CONTACT WINDOW === */
+.social_icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 74%;
+    background: #0005;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.social_icons a {
+    margin: 0 auto;
+    height: 90%;
+    width: 15%;
+}
+
+.social_icons a img {
+    width: unset;
+    height: 40%;
+    margin: 40% auto 0 auto;
+    position: relative;
+    cursor:pointer;
+}
+
+/* === GALLERY THAT SHOW UP WHEN YOU CLICK IN THE MAIN PHOTO === */
+
+.hidden_gallery {
+    width: 100%;
+    z-index: 2;
+    height: auto;
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+}
+
+.hidden_gallery img {
+    height: auto;
+    width: 100%;
+}
+
+/* === SCROLLBAR === */
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: lightgrey;
+}
+
+-moz-scrollbar-track {
+    width:0px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+-moz-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: lightgray;
+}
+
+.leave_gallery {
+    position: fixed;
+    top: 9%;
+    left: 5%;
+    width:3em;
+    margin: 0 auto;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    display: none;
+    background: none;
+    transition:1s ease;
+}
+
+.leave_gallery:hover svg * {
+    fill:#fff;
+
+}
+
+.leave_gallery:hover svg {
+    transform:rotateZ(90deg);
+    transition: 0.3s cubic-bezier(0.6, -0.01, 0.62, 1.01);
+
+}
+
+.leave_gallery:focus {
+    outline: 0;
+}
+
+.leave_gallery_toggle {
+    overflow-y: hidden;
+}
+
+.see_more {
+    height: 8vh;
+    line-height: 8vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #D7282Faa;
+    border: none;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+    transition:0.3s ease;
+    display:none;
+}
+
+.see_more:hover {
+    background:#D7282F;
+    height: 12vh;
+    line-height: 12vh;
+}
+
+.expand_gallery {
+    top:0%;
+}
+
+/*.sec_img_container {
+    width: calc(100%/3);
+    height: calc(100%/2);
+    float:left;
+    position: relative;
+    cursor: pointer;
+}*/
+
+.sec_img_container:hover img {
+    filter:brightness(1.2);
+}
+
+.full_img {
+    position: absolute;
+    z-index: 100;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.sec_img_noheight {
+    height: 0 !important;
+    transition:1s ease;
+}
+
+.sec_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details_div {
+    position: absolute;
+    display:none;
+    bottom: 0;
+    color: white;
+    background: #0005;
+    padding: 3%;
+}
+
+------------------
+
+.projects {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 46vh;
+}
+
+.projects .imgs_container {
+    position: relative;
+    height: calc(100vh/2.4);
+    width: calc(100%/3);
+    float: left;
+}
+
+        .projects .imgs_container:hover {
+            cursor:pointer;
+            -webkit-transition:0.2s ease;
+            -o-transition:0.2s ease;
+            transition:0.2s ease;
+        }
+
+        .projects .imgs_container:hover img {
+            position: relative;
+            transition:0.2s ease;
+            outline:solid 0.5em #fff1;
+            outline-offset: -0.5em;
+        }
+        .projects .imgs_container:nth-last-child(1) {
+            margin-bottom: 9vh;
+        }
+
+.projects img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    float: left;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 10%;
+       object-position: 100% 10%;
+       
+       transition:0.5s ease;
+       outline:solid 0px #fff0;
+}
+
+
+.change_project_height {
+    height:auto !important;
+}
+
+/* === BOTTOM BOX IS THE DARK BLOCK IN THE BOTTOM OF EVERY .PROJECTS IMG === */
+
+.bottom_box {
+    position: fixed;
+    bottom: 0;
+    right: 0%;
+    text-align: center;
+    max-width: 38.2%;
+    height: auto;
+    text-align: right;
+    padding: 30px;
+    margin: 0 auto;
+    background: #0000;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    display: none;
+    z-index: 10000;
+}
+
+.bottom_box:hover {
+    background: #fffa;
+    color: #222;
+}
+
+
+.bottom_box h3 {
+    font-size: 1.3em;
+    margin: 0 0 20px 0;
+}
+
+.bottom_box p {
+    font-size: 0.8em;
+}
+
+.bottom_box h3, .bottom_box p {
+    font-weight: 300;
+
+}
+
+
+
+.expand_gallery {
+    top:0%;
+}
+
+.low_brightness {
+    filter:brightness(0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === RESPONSIVENESS === */
+
+/* === FOR SCREENS WITH LESS THAN 1200px, .IMAGE_CONTAINER WILL NOT BE ANIMATED === */
+
+@media screen and (max-width: 1000px) {
+
+    .image_container {
+        -webkit-animation: none;
+        animation:none;
+        background-position:100% -50%;
+    }
+}
+
+
+
+
+/* === CONFIGURATION FOR SCREENS WITH LESS THAN 1000px === */
+
+@media screen and (max-width: 670px) {
+
+    .top_bar .left_bar {
+        width: 100%;
+    }
+
+    .top_bar .right_bar {
+        width: 100%;
+        height: 10vw;
+    }
+
+        .left_bar img {
+            top:15%;
+            bottom: 20%;
+            right: 0;
+            left: 5%;
+            width: 40%;
+        }
+
+        .left_bar p {
+            right: 10%;
+            font-size: 3.5em;
+            line-height: 11vw;
+        }
+
+        .right_bar a {
+            margin: 0 auto;
+            font-size: 3em;
+            line-height: 10vw;
+        }
+
+    .image_container {
+        background-size: 135%;
+        background-position: 25% 0%;
+        animation:none;
+        opacity:0.6;
+        height: 100%;
+        bottom: unset;
+    }
+
+    .main_quote {
+        right: 50%;
+        bottom: unset;
+        animation: none;
+        top: 10%;
+    }
+
+        .main_quote h2 {
+            font-size: 3em;
+            letter-spacing: -0.5px;
+            font-weight: 300;
+        }
+
+        .main_quote p {
+            bottom: unset;
+            right:unset;
+            top: 105%;
+            font-size: 2.5em;
+            font-weight: 300;
+            letter-spacing: 0;
+            text-align: left;
+        }
+
+    .projects .imgs_container {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .footer {
+        display:grid;
+    }
+
+    .contact_window {
+        width: 100%;
+        height: 78%;
+        top: 23.7vw;
+        z-index: 2;
+    }
+
+        .contact_window p {
+            font-size: 3em;
+            top:4vw;
+        }
+
+        .contact_window label {
+            font-size: 3em;
+        }
+
+        .contact_window input {
+            height: 8vw;
+            font-size: 20px;
+        }
+
+        .contact_window form {
+            top: 12%;
+        }
+
+        .social_icons {
+            top: 81%;
+        }
+
+        .social_icons a img {
+            width: 16vw;
+            height: 14vh;
+            margin: 7% auto 0 auto;
+        }
+
+        .hidden_gallery {
+            position: fixed;
+            height: auto;
+        }
+
+        .leave_gallery {
+            top: 6%;
+            left:10%;
+            bottom:unset;
+        }
+
+        .left_bar {
+            box-shadow: inset 0 -3px 0 white;
+            height: 14vw;
+        }
+
+        .profile_about .profile_picture {
+            -webkit-mask-image: linear-gradient(0deg, transparent, #fff);
+            right:0;
+            width:100%;
+        }
+
+        .text_box {
+            left:0;
+            top: 2vw;
+        }
+
+        .text_box h1 {
+            font-weight: 400;
+            font-size: 4.5em;
+        }
+
+        .text_box p {
+            font-weight: 400;
+            font-size: 3em;
+        }
+
+        .text_box img {
+            width: 100%;
+            position: relative;
+            left: 0;
+            margin-bottom: 2vh;
+        }
+
+        .profile_about .profile_picture {
+            opacity:0.6;
+        }
+
+        .leave_gallery p {
+            font-size: 4vw;
+            padding: 10px 7px;
+            width: 100%;
+            background: #000a;
+        }
+
+        .mid_content {
+            top: 22vw;
+            bottom: 9vh;
+        }
+
+        .projects {
+            top: 48vh;
+        }
+
+        .see_more {
+            font-size: 6vw;
+            background: #D7282F55;
+        }
+
+        .contact_window textarea {
+            height: 15vw;
+            min-height: 15vw;
+            max-height: 20vw;
+        }
+
+        
+.left_bar::after {
+    color: white;
+    font-size: 1.35em;
+    right: 10%;
+    font-weight: 200;
+}
+
+.bottom_box {
+    max-width: unset;
+}
+
+.bottom_box h3 {
+    font-size: 3em;
+}
+
+.bottom_box p {
+    font-size: 2em;
+}
+
+.change_project_height {
+    height: 100% !important;
+    width: auto !important;
+}
+
+}
