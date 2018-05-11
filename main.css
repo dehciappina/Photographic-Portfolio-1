@@ -769,7 +769,7 @@ input:focus, textarea:focus {
 
 /* === CONFIGURATION FOR SCREENS WITH LESS THAN 620px === */
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 550px) {
 
     .top_bar .left_bar {
         width: 100%;
