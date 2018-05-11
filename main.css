@@ -437,7 +437,7 @@ a:hover, a:visited, a:link, a:active
 
 .contact_window input {
     border: none;
-    height: 2vw;
+    height: 5vh;
     margin-bottom: 13px;
     width: 95%;
     padding-left: 5%;
@@ -483,7 +483,8 @@ input:focus, textarea:focus {
     bottom: 0;
     right: 0;
     left: 0;
-    top: 74%;
+    height: 24%;
+    padding: 0 10%;
     background: rgba(0,0,0,0.34);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -493,7 +494,7 @@ input:focus, textarea:focus {
 .social_icons a {
     margin: 0 auto;
     height: 90%;
-    width: 15%;
+    width: auto;
 }
 
 .social_icons a img {
@@ -763,23 +764,12 @@ input:focus, textarea:focus {
 
 /* === RESPONSIVENESS === */
 
-/* === FOR SCREENS WITH LESS THAN 1200px, .IMAGE_CONTAINER WILL NOT BE ANIMATED === */
-
-@media screen and (max-width: 1000px) {
-
-    .image_container {
-        -webkit-animation: none;
-        animation:none;
-        background-position: 50% 100%;
-    }
-}
 
 
 
+/* === CONFIGURATION FOR SCREENS WITH LESS THAN 620px === */
 
-/* === CONFIGURATION FOR SCREENS WITH LESS THAN 1000px === */
-
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 620px) {
 
     .top_bar .left_bar {
         width: 100%;
@@ -861,6 +851,10 @@ input:focus, textarea:focus {
         z-index: 2;
     }
 
+    .contact_window_down {
+        transform: translateY(-160%);
+    }
+
         .contact_window p {
             font-size: 3em;
             top:4vw;
@@ -871,7 +865,7 @@ input:focus, textarea:focus {
         }
 
         .contact_window input {
-            height: 8vw;
+            height: 5vh;
             font-size: 20px;
         }
 
@@ -973,6 +967,20 @@ input:focus, textarea:focus {
     font-size: 1.35em;
     right: 10%;
     font-weight: 200;
+}
+
+.about_p1::before {
+    top: 20vw;
+}
+
+.about_p2::before {
+    top: 68vw;
+}
+
+.about_p2::before, .about_p1::before {
+    height: 42vw;
+    left: 3%;
+    width:1vw;
 }
 
     
