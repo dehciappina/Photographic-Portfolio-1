@@ -237,7 +237,7 @@ a:hover, a:visited, a:link, a:active
 
 .contact_window input {
     border: none;
-    height: 2vw;
+    height: 5vh;
     margin-bottom: 13px;
     width: 95%;
     padding-left: 5%;
@@ -266,7 +266,7 @@ input:focus, textarea:focus {
 }
 
 .contact_window form .botaoenviar {
-    background: #0005;
+    background: rgba(0,0,0,0.34);
     color: white;
     float: left;
     width: 100%;
@@ -283,8 +283,9 @@ input:focus, textarea:focus {
     bottom: 0;
     right: 0;
     left: 0;
-    top: 74%;
-    background: #0005;
+    height: 24%;
+    padding: 0 10%;
+    background: rgba(0,0,0,0.34);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -451,15 +452,6 @@ input:focus, textarea:focus {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-}
-
-.details_div {
-    position: absolute;
-    display:none;
-    bottom: 0;
-    color: white;
-    background: #0005;
-    padding: 3%;
 }
 
 ------------------
@@ -726,7 +718,7 @@ input:focus, textarea:focus {
         }
 
         .contact_window input {
-            height: 8vw;
+            height: 5vh;
             font-size: 20px;
         }
 
@@ -845,6 +837,11 @@ input:focus, textarea:focus {
 .change_project_height {
     height: 100% !important;
     width: auto !important;
+}
+
+
+.contact_window_down {
+    transform: translateY(-160%);
 }
 
 }
