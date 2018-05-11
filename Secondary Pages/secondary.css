@@ -147,7 +147,6 @@ a:hover, a:visited, a:link, a:active
     bottom: 9vh;
     right: 0;
     left: 0;
-    background: #fff;
 }
 
 .image_container {
@@ -177,7 +176,13 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     height: 91%;
     background: linear-gradient(180deg, #F32735, #820000);
-    display:none;
+    transform: translateY(-140%);
+    transition:0.5s ease;
+}
+
+.contact_window_down {
+    transform: translateY(0%) !important;
+    transition:0.4s ease;
 }
 
 .contact_window p {
@@ -437,9 +442,10 @@ input:focus, textarea:focus {
 
 .projects .imgs_container {
     position: relative;
-    height: calc(100vh/2.4);
+    height: 36vh;
     width: calc(100%/3);
     float: left;
+    overflow: hidden;
 }
 
         .projects .imgs_container:hover {
@@ -449,14 +455,20 @@ input:focus, textarea:focus {
             transition:0.2s ease;
         }
 
-        .projects .imgs_container:hover img {
+        .projects .imgs_container:hover .main_img_selected {
             position: relative;
-            transition:0.2s ease;
-            outline:solid 0.5em #fff1;
-            outline-offset: -0.5em;
+            transition: 0.5s ease;
+            transform: scale(1.1);
         }
+
+
         .projects .imgs_container:nth-last-child(1) {
             margin-bottom: 9vh;
+        }
+
+        .main_img_selected {
+            transition:1s ease;
+
         }
 
 .projects img {
