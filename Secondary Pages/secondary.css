@@ -469,7 +469,8 @@ input:focus, textarea:focus {
 
 
 .change_project_height {
-    height:auto !important;
+    height: auto !important;
+    min-height: 100%;
 }
 
 /* === BOTTOM BOX IS THE DARK BLOCK IN THE BOTTOM OF EVERY .PROJECTS IMG === */
