@@ -60,30 +60,10 @@ $('.click_out').click(function() {
 })
 
 $(".projects_button").click(function() {
-
-    if($('.main_quote').is(':visible')) {
-
-        $('.main_quote').slideUp()
-        $('.projects').finish().animate({
-            top:'0'
-        }, 200)
-    }
-
-    else {
-
-        if($(window).width() > 670) {
-            $('.main_quote').slideDown(100)
-            $('.projects').finish().animate({
-                top:'32vh'
-            }, 300)
-        }
-
-        else {
-            $('.main_quote').slideDown(100)
-            $('.projects').finish().animate({
-                top:'48vh'
-            }, 300)
-        }
+    if($(window).width() > 670) {
+        $('.projects').finish().toggleClass('project_up')
+    } else {
+        $('.projects').finish().toggleClass('project_up_responsive')
     }
 })
 

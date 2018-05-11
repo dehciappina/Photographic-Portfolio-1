@@ -209,6 +209,17 @@ a:hover, a:visited, a:link, a:active
     right: 0;
     bottom: 0;
     top: 32vh;
+    transition:0.5s ease;
+}
+
+.project_up {
+    transform:translateY(-32vh);
+    transition:0.3s ease;
+}
+
+.project_up_responsive {
+    transform:translateY(-48vh);
+    transition:0.3s ease;
 }
 
 .projects .imgs_container {
@@ -229,7 +240,7 @@ a:hover, a:visited, a:link, a:active
         .projects .imgs_container:hover .main_img_selected {
             position: relative;
             transition: 1s ease;
-            transform: scale(1.1) rotate(2deg);
+            transform: scale(1.1);
             filter:invert(10%) brightness(1.2);
         }
 
@@ -575,16 +586,6 @@ input:focus, textarea:focus {
     font-weight: 100;
 }
 
-.leave_gallery:hover svg * {
-    fill:#fff;
-
-}
-
-.leave_gallery:hover svg {
-    transform:rotateZ(90deg);
-    transition: 0.3s cubic-bezier(0.6, -0.01, 0.62, 1.01);
-
-}
 
 .leave_gallery:focus {
     outline: 0;
