@@ -608,25 +608,10 @@ input:focus, textarea:focus {
 
 
 
-/* === RESPONSIVENESS === */
-
-/* === FOR SCREENS WITH LESS THAN 1200px, .IMAGE_CONTAINER WILL NOT BE ANIMATED === */
-
-@media screen and (max-width: 1000px) {
-
-    .image_container {
-        -webkit-animation: none;
-        animation:none;
-        background-position:100% -50%;
-    }
-}
-
-
-
 
 /* === CONFIGURATION FOR SCREENS WITH LESS THAN 1000px === */
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 550px) {
 
     .top_bar .left_bar {
         width: 100%;
