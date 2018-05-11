@@ -30,7 +30,8 @@ a:hover, a:visited, a:link, a:active
 }
 
 .low_brightness {
-    filter:brightness(0.1);
+    -webkit-filter:brightness(0.1);
+            filter:brightness(0.1);
 }
 
 /* === HEADER === */
@@ -39,6 +40,18 @@ a:hover, a:visited, a:link, a:active
     position:fixed;
     z-index: 2;
     width: 100%;
+    -webkit-transition:1s ease;
+    -o-transition:1s ease;
+    transition:1s ease;
+}
+
+.hidden_top_bar {
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
+    transition:0.5s ease;
 }
 
 .left_bar, .right_bar {
@@ -127,6 +140,18 @@ a:hover, a:visited, a:link, a:active
     display: inline-flex;
     padding: 0 8vw;
     z-index: 2;
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
+    transition:0.5s ease;
+}
+
+.hidden_footer {
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
+    transition:0.5s ease;
 }
 
 .footer p {
@@ -149,6 +174,11 @@ a:hover, a:visited, a:link, a:active
     background: #fff;
 }
 
+
+.mid_content_noscroll {
+    overflow-y:hidden !important;
+}
+
 .image_container {
     position: fixed;
     background-image: url(Assets/Images/woman.jpeg);
@@ -169,14 +199,16 @@ a:hover, a:visited, a:link, a:active
 /* === ANIMATION THAT MOVES THE BACKGROUND IMAGE === */
                 @-webkit-keyframes background_move {
                     0% {
-                        transform:translate(0);
+                        -webkit-transform:translate(0);
+                                transform:translate(0);
                         opacity: 0.8;
                         -webkit-filter:blur(0.2px);
                                 filter:blur(0.2px);
                     }
 
                     100% {
-                        transform:translate(70px, 50px);
+                        -webkit-transform:translate(70px, 50px);
+                                transform:translate(70px, 50px);
                         opacity: 0.4;
                         -webkit-filter:blur(3px);
                                 filter:blur(3px);
@@ -185,14 +217,16 @@ a:hover, a:visited, a:link, a:active
 
                 @keyframes background_move {
                     0% {
-                        transform:translate(0);
+                        -webkit-transform:translate(0);
+                                transform:translate(0);
                         opacity: 0.8;
                         -webkit-filter:blur(0.2px);
                                 filter:blur(0.2px);
                     }
 
                     100% {
-                        transform:translate(70px, 50px);
+                        -webkit-transform:translate(70px, 50px);
+                                transform:translate(70px, 50px);
                         opacity: 0.4;
                         -webkit-filter:blur(3px);
                                 filter:blur(3px);
@@ -209,16 +243,26 @@ a:hover, a:visited, a:link, a:active
     right: 0;
     bottom: 0;
     top: 32vh;
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
     transition:0.5s ease;
 }
 
 .project_up {
-    transform:translateY(-32vh);
+    -webkit-transform:translateY(-32vh);
+        -ms-transform:translateY(-32vh);
+            transform:translateY(-32vh);
+    -webkit-transition:0.3s ease;
+    -o-transition:0.3s ease;
     transition:0.3s ease;
 }
 
 .project_up_responsive {
-    transform:translateY(-48vh);
+    -webkit-transform:translateY(-48vh);
+        -ms-transform:translateY(-48vh);
+            transform:translateY(-48vh);
+    -webkit-transition:0.3s ease;
+    -o-transition:0.3s ease;
     transition:0.3s ease;
 }
 
@@ -239,8 +283,12 @@ a:hover, a:visited, a:link, a:active
 
         .projects .imgs_container:hover .main_img_selected {
             position: relative;
+            -webkit-transition: 0.5s ease;
+            -o-transition: 0.5s ease;
             transition: 0.5s ease;
-            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                    transform: scale(1.1);
         }
 
         .projects .imgs_container:hover .bottom_box {
@@ -256,6 +304,8 @@ a:hover, a:visited, a:link, a:active
         }
 
         .main_img_selected {
+            -webkit-transition:1s ease;
+            -o-transition:1s ease;
             transition:1s ease;
 
         }
@@ -284,7 +334,7 @@ a:hover, a:visited, a:link, a:active
     text-align: center;
     width: 38.2%;
     margin: 0 auto;
-    background:#0005;
+    background:rgba(0,0,0,0.34);
     color: white;
     line-height: 6vh;
     font-size: 20px;
@@ -337,13 +387,24 @@ a:hover, a:visited, a:link, a:active
     width: 23.6%;
     height: 100%;
     height: 91%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F32735), to(#820000));
+    background: -webkit-linear-gradient(top, #F32735, #820000);
+    background: -o-linear-gradient(top, #F32735, #820000);
     background: linear-gradient(180deg, #F32735, #820000);
-    transform: translateY(-140%);
+    -webkit-transform: translateY(-140%);
+        -ms-transform: translateY(-140%);
+            transform: translateY(-140%);
+    -webkit-transition:0.5s ease;
+    -o-transition:0.5s ease;
     transition:0.5s ease;
 }
 
 .contact_window_down {
-    transform: translateY(0%) !important;
+    -webkit-transform: translateY(0%) !important;
+        -ms-transform: translateY(0%) !important;
+            transform: translateY(0%) !important;
+    -webkit-transition:0.4s ease;
+    -o-transition:0.4s ease;
     transition:0.4s ease;
 }
 
@@ -405,7 +466,7 @@ input:focus, textarea:focus {
 }
 
 .contact_window form .botaoenviar {
-    background: #0005;
+    background: rgba(0,0,0,0.34);
     color: white;
     float: left;
     width: 100%;
@@ -423,7 +484,7 @@ input:focus, textarea:focus {
     right: 0;
     left: 0;
     top: 74%;
-    background: #0005;
+    background: rgba(0,0,0,0.34);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -589,6 +650,7 @@ input:focus, textarea:focus {
     display:none;
     text-shadow: 0 0 20px black;
     font-weight: 100;
+    cursor:pointer;
 }
 
 
@@ -607,11 +669,13 @@ input:focus, textarea:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #D7282Faa;
+    background: rgba(215, 40, 47, 0.7);
     border: none;
     font-weight: 300;
     font-size: 1em;
     text-align: center;
+    -webkit-transition:0.3s ease;
+    -o-transition:0.3s ease;
     transition:0.3s ease;
     display:none;
 }
@@ -641,7 +705,8 @@ input:focus, textarea:focus {
 }
 
 .sec_img_container:hover img {
-    filter:brightness(1.2);
+    -webkit-filter:brightness(1.2);
+            filter:brightness(1.2);
 }
 
 .full_img {
@@ -653,13 +718,16 @@ input:focus, textarea:focus {
 
 .sec_img_noheight {
     height: 0 !important;
+    -webkit-transition:1s ease;
+    -o-transition:1s ease;
     transition:1s ease;
 }
 
 .sec_img_container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .details_div {
@@ -667,10 +735,10 @@ input:focus, textarea:focus {
     display:none;
     bottom: 0;
     color: white;
-    background: #0005;
+    background: rgba(0,0,0,0.34);
     padding: 3%;
 }
-}
+
 
 
 
@@ -745,7 +813,8 @@ input:focus, textarea:focus {
     .image_container {
         background-size: 135%;
         background-position: 30% 100%;
-        animation:none;
+        -webkit-animation:none;
+                animation:none;
         opacity:0.6;
         height: 100%;
         bottom: unset;
@@ -754,7 +823,8 @@ input:focus, textarea:focus {
     .main_quote {
         right: 50%;
         bottom: unset;
-        animation: none;
+        -webkit-animation: none;
+                animation: none;
         top: 10%;
     }
 
@@ -780,6 +850,7 @@ input:focus, textarea:focus {
     }
 
     .footer {
+        display:-ms-grid;
         display:grid;
     }
 
@@ -830,12 +901,14 @@ input:focus, textarea:focus {
         }
 
         .left_bar {
-            box-shadow: inset 0 -3px 0 white;
+            -webkit-box-shadow: inset 0 -3px 0 white;
+                    box-shadow: inset 0 -3px 0 white;
             height: 14vw;
         }
 
         .profile_about .profile_picture {
-            -webkit-mask-image: linear-gradient(0deg, transparent, #fff);
+            -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
+            -webkit-mask-image: -webkit-linear-gradient(bottom, transparent, #fff);
             right:0;
             width:100%;
         }
@@ -877,6 +950,7 @@ input:focus, textarea:focus {
             top: 22vw;
             bottom: 9vh;
         }
+
 
         .projects {
             top: 48vh;

@@ -83,8 +83,9 @@ $('.imgs_container').click(function() {
     $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
     $('.image_container').finish().toggleClass('low_brightness')
     $('.projects').finish().removeClass('project_up')
-    $('.footer').finish().toggle('blind', { direction: "down" }, toggleBars);
-    $('.top_bar').finish().toggle('blind', toggleBars);
+    $('.footer').finish().toggleClass('hidden_footer')
+    $('.top_bar').finish().toggleClass('hidden_top_bar')
+    $('.mid_content').toggleClass('mid_content_noscroll')
     
     $(this).find('.hidden_gallery').find('img').toggleClass('change_project_height')
 })
@@ -95,9 +96,10 @@ $('.leave_gallery').click(function() {
     $('.imgs_container').find('.main_img_selected').finish().show()
     $('.imgs_container').siblings().finish().removeClass('low_brightness')
     $('.image_container').finish().removeClass('low_brightness')
-    $('.top_bar').finish().toggle('blind', toggleBars);
-    $('.footer').finish().toggle('blind', { direction: "down" }, toggleBars);
     $('.see_more').finish().slideToggle(300)
+    $('.footer').finish().removeClass('hidden_footer')
+    $('.top_bar').finish().removeClass('hidden_top_bar')
+    $('.mid_content').removeClass('mid_content_noscroll')
     
     $(this).find('.hidden_gallery').find('img').toggleClass('change_project_height')
 })
