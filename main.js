@@ -66,22 +66,22 @@ $(".projects_button").click(function() {
         $('.main_quote').slideUp()
         $('.projects').finish().animate({
             top:'0'
-        }, 300)
+        }, 200)
     }
 
     else {
 
         if($(window).width() > 670) {
-            $('.main_quote').slideDown(300)
+            $('.main_quote').slideDown(100)
             $('.projects').finish().animate({
-                top:'46vh'
+                top:'32vh'
             }, 300)
         }
 
         else {
-            $('.main_quote').slideDown(300)
+            $('.main_quote').slideDown(100)
             $('.projects').finish().animate({
-                top:'42.5vw'
+                top:'48vh'
             }, 300)
         }
     }

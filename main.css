@@ -150,12 +150,12 @@ a:hover, a:visited, a:link, a:active
 }
 
 .image_container {
-    position: absolute;
+    position: fixed;
     background-image: url(Assets/Images/woman.jpeg);
     background-size: 70%;
-    background-position: 100% 180%;
+    background-position: 100% 40%;
     background-repeat: no-repeat;
-    top: 0;
+    top: -40%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -169,14 +169,14 @@ a:hover, a:visited, a:link, a:active
 /* === ANIMATION THAT MOVES THE BACKGROUND IMAGE === */
                 @-webkit-keyframes background_move {
                     0% {
-                        background-position: 100% 180%;
+                        transform:translate(0);
                         opacity: 0.8;
                         -webkit-filter:blur(0.2px);
                                 filter:blur(0.2px);
                     }
 
                     100% {
-                        background-position: 120% 210%;
+                        transform:translate(70px, 50px);
                         opacity: 0.4;
                         -webkit-filter:blur(3px);
                                 filter:blur(3px);
@@ -185,14 +185,14 @@ a:hover, a:visited, a:link, a:active
 
                 @keyframes background_move {
                     0% {
-                        background-position: 100% 180%;
+                        transform:translate(0);
                         opacity: 0.8;
                         -webkit-filter:blur(0.2px);
                                 filter:blur(0.2px);
                     }
 
                     100% {
-                        background-position: 120% 210%;
+                        transform:translate(70px, 50px);
                         opacity: 0.4;
                         -webkit-filter:blur(3px);
                                 filter:blur(3px);
@@ -208,7 +208,7 @@ a:hover, a:visited, a:link, a:active
     left: 0;
     right: 0;
     bottom: 0;
-    top: 46vh;
+    top: 32vh;
 }
 
 .projects .imgs_container {
@@ -216,6 +216,7 @@ a:hover, a:visited, a:link, a:active
     height: 36vh;
     width: calc(100vw/3);
     float: left;
+    overflow: hidden;
 }
 
         .projects .imgs_container:hover {
@@ -225,11 +226,11 @@ a:hover, a:visited, a:link, a:active
             transition:0.2s ease;
         }
 
-        .projects .imgs_container:hover img {
+        .projects .imgs_container:hover .main_img_selected {
             position: relative;
-            transition:0.2s ease;
-            outline:solid 0.5em #fff1;
-            outline-offset: -0.5em;
+            transition: 1s ease;
+            transform: scale(1.1) rotate(2deg);
+            filter:invert(10%) brightness(1.2);
         }
 
         .projects .imgs_container:hover .bottom_box {
@@ -244,6 +245,11 @@ a:hover, a:visited, a:link, a:active
             margin-bottom: 9vh;
         }
 
+        .main_img_selected {
+            transition:3s ease;
+
+        }
+
 .projects img {
     height: 100%;
     width: 100%;
@@ -254,7 +260,6 @@ a:hover, a:visited, a:link, a:active
     -o-object-position: 100% 10%;
        object-position: 100% 10%;
        
-       transition:0.5s ease;
        outline:solid 0px #fff0;
 }
 
@@ -283,10 +288,9 @@ a:hover, a:visited, a:link, a:active
 .main_quote {
     position: absolute;
     z-index: 1;
-    top: 10vh;
+    top: 5vh;
     left: 8vw;
     right: 50%;
-    bottom: 52.2%;
     cursor: default;
 }
 
@@ -296,21 +300,21 @@ a:hover, a:visited, a:link, a:active
 
 .main_quote h2, .main_quote p {
     color:#555;
+    font-weight: 300;
 }
 
     .main_quote h2 {
-        font-size: 1.5em;
-        font-weight: 300;
+        font-size: 1.1em;
+        line-height: 120%;
         text-shadow: -3px 2px 4px #0002;
     }
 
     .main_quote p {
         position: absolute;
-        right: 2%;
         bottom: 10%;
-        top:20vh;
-        font-size: 0.8em;
-        text-align: right;
+        top: 15vh;
+        font-size: 0.6em;
+        text-align: left;
     }
 
 
@@ -559,14 +563,16 @@ input:focus, textarea:focus {
     position: fixed;
     top: 9%;
     left: 5%;
-    width:3em;
+    color: white;
     margin: 0 auto;
     z-index: 1000;
     border: none;
-    cursor: pointer;
-    display: none;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
     background: none;
-    transition:1s ease;
+    display:none;
+    text-shadow: 0 0 20px black;
+    font-weight: 100;
 }
 
 .leave_gallery:hover svg * {
@@ -690,7 +696,7 @@ input:focus, textarea:focus {
     .image_container {
         -webkit-animation: none;
         animation:none;
-        background-position:100% -50%;
+        background-position: 50% 100%;
     }
 }
 
@@ -732,7 +738,7 @@ input:focus, textarea:focus {
 
     .image_container {
         background-size: 135%;
-        background-position: 25% 0%;
+        background-position: 30% 100%;
         animation:none;
         opacity:0.6;
         height: 100%;
