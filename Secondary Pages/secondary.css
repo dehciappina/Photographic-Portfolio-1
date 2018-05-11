@@ -1,3 +1,7 @@
+/*
+    This .CSS file is almost equal to the main one in many ways, with some modifications and removal of unnecessary code for the secondary pages.
+*/
+
 * {
     margin:0;
     padding:0;
@@ -324,14 +328,16 @@ input:focus, textarea:focus {
     position: fixed;
     top: 9%;
     left: 5%;
-    width:3em;
+    color: white;
     margin: 0 auto;
     z-index: 1000;
     border: none;
-    cursor: pointer;
-    display: none;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
     background: none;
-    transition:1s ease;
+    display: none;
+    text-shadow: 0 0 20px black;
+    font-weight: 100;
 }
 
 .leave_gallery:hover svg * {
@@ -473,8 +479,6 @@ input:focus, textarea:focus {
     min-height: 100%;
 }
 
-/* === BOTTOM BOX IS THE DARK BLOCK IN THE BOTTOM OF EVERY .PROJECTS IMG === */
-
 .bottom_box {
     position: fixed;
     bottom: 0;
@@ -492,6 +496,7 @@ input:focus, textarea:focus {
     transition: 0.3s ease;
     display: none;
     z-index: 10000;
+    cursor: default;
 }
 
 .bottom_box:hover {
