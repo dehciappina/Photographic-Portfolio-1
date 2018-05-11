@@ -34,11 +34,9 @@ $(document).ready(function() {
 
 })
 
-
 if($(window).width() > 670) {
 $('.contact_button').click(function() {
-    $('.contact_window').finish().toggle('blind', 300)
-    console.log('hey')
+    $('.contact_window').toggleClass('contact_window_down')
     $('.click_out').toggle()
 })
 }
@@ -46,7 +44,7 @@ $('.contact_button').click(function() {
 
     $('.contact_button').click(function() {
         if($(window).width() < 670) {
-            $('.contact_window').finish().toggle('blind', 300)
+            $('.contact_window').toggleClass('contact_window_down')
             console.log('hey')
             $('.click_out').hide()
             
@@ -55,7 +53,7 @@ $('.contact_button').click(function() {
     })
 
 $('.click_out').click(function() {
-    $('.contact_window').hide('blind', 300)
+    $('.contact_window').toggleClass('contact_window_down')
     $('.click_out').hide()
 })
 
@@ -84,7 +82,7 @@ $('.imgs_container').click(function() {
     $(this).siblings().finish().toggleClass('low_brightness')
     $(this).siblings().find('.hidden_gallery').finish().slideUp(800, 'easeOutCubic')
     $('.image_container').finish().toggleClass('low_brightness')
-
+    $('.projects').finish().removeClass('project_up')
     $('.footer').finish().toggle('blind', { direction: "down" }, toggleBars);
     $('.top_bar').finish().toggle('blind', toggleBars);
     

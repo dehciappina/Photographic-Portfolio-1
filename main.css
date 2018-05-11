@@ -225,7 +225,7 @@ a:hover, a:visited, a:link, a:active
 .projects .imgs_container {
     position: relative;
     height: 36vh;
-    width: calc(100vw/3);
+    width: calc(100%/3);
     float: left;
     overflow: hidden;
 }
@@ -239,9 +239,8 @@ a:hover, a:visited, a:link, a:active
 
         .projects .imgs_container:hover .main_img_selected {
             position: relative;
-            transition: 1s ease;
+            transition: 0.5s ease;
             transform: scale(1.1);
-            filter:invert(10%) brightness(1.2);
         }
 
         .projects .imgs_container:hover .bottom_box {
@@ -257,7 +256,7 @@ a:hover, a:visited, a:link, a:active
         }
 
         .main_img_selected {
-            transition:3s ease;
+            transition:1s ease;
 
         }
 
@@ -339,7 +338,13 @@ a:hover, a:visited, a:link, a:active
     height: 100%;
     height: 91%;
     background: linear-gradient(180deg, #F32735, #820000);
-    display:none;
+    transform: translateY(-140%);
+    transition:0.5s ease;
+}
+
+.contact_window_down {
+    transform: translateY(0%) !important;
+    transition:0.4s ease;
 }
 
 .contact_window p {
